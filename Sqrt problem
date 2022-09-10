@@ -1,0 +1,29 @@
+/* count perfect squares 
+input 4  3 81 49 4
+output 3
+explanation: sqrt 81=9 */
+import java.util.*;
+public class Demo4 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[] arr=new int[n];
+		for(int i=0;i<n;i++) {
+			arr[i]=sc.nextInt();
+			
+		}
+		int c=0;
+		long t=0;
+		for(int i=0;i<n;i++) {
+			t= (long)Math.sqrt(arr[i]);
+			if(t*t==arr[i]) {
+				c++;
+			}
+		}
+		System.out.println(c);
+		
+
+	}
+
+}
